@@ -1,20 +1,7 @@
 <?php
-/**
- * ZFJoomla
- * Zend Framework for Joomla
- * Red Black Tree LLC
- *
- *
- * @author rbsolutions (rbsoultions.us@gmail.com)
- * @copyright (c) 2010 Red Black Tree LLC
- * @category ComZend
- * @package Core
- * @link http://zfjoomla.rbsolutions.us
- * @version $Id:$
- */
-define ('_VALID_MOS',true);
+defined ('_JEXEC') or die ('direct access not allowed');
 defined("ZEND_COMPONENT_NAME")
-        || define('ZEND_COMPONENT_NAME','com_zend');
+        || define('ZEND_COMPONENT_NAME','com_joomlazend');
 defined('ROOT_DIR')
         ||define('ROOT_DIR', dirname(__FILE__));
 // Define pat to application directory

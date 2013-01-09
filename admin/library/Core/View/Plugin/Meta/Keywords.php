@@ -12,7 +12,7 @@
  * @link http://joomlazend.rbsolutions.us
  * @version $Id:$
  */
-defined ('_VALID_MOS') or
+defined('_JEXEC') or 
     die('Direct Access to this location is not allowed');
 /**
  * Description of Keywords
@@ -25,6 +25,8 @@ defined ('_VALID_MOS') or
  * @package Core
  * @subpackage View_Plugin
  */
+jimport('joomla.html.html.behavior');
+include_once 'behavior.php';
 class Core_View_Plugin_Meta_Keywords extends Zend_Controller_Plugin_Abstract {
     /**
      * @var string the content to analyze

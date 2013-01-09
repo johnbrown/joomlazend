@@ -1,19 +1,5 @@
 <?php
 /**
- * JoomlaZend
- * Zend Framework for Joomla
- * Red Black Tree LLC
- *
- *
- * @author rbsolutions (rbsoultions.us@gmail.com)
- * @copyright (c) 2010 Red Black Tree LLC
- * @category JoomlZend
- * @package Administrator_ComZend_Application
- * @link http://joomlazend.rbsolutions.us
- * @version $Id:$
- */
-
-/**
  * Bootstrap
  *
  * Zend Framework bootstrap that loads config variables from the Joomla Config
@@ -110,10 +96,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
             return Zend_Registry::get('autoloader');
         }
         
-        
+        require_once 'Zend/Loader.php';
+        require_once 'Zend/Loader/Autoloader.php';
          // Add autoloader empty namespace
         $autoLoader = Zend_Loader_Autoloader::getInstance();
-        Zend_Registry::set('autoloader', $autoloader);
+          Zend_Registry::set('autoloader', $autoLoader);
         // Return it so that it can be stored by the bootstrap
         return $autoLoader;
     }

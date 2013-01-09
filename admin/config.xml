@@ -1,5 +1,19 @@
-<root>
-    <params>
-        <param type="text" name="version" label="Version:" description="The current installed version of the Zend Framework for Joomla" />
-    </params>
-</root>
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+    <fieldset   name="version"
+                label="COM_JOOMLAZEND_VERSION"
+                description="COM_JOOMLAZEND_VERSION_DESC">
+        
+        <field  name="version"
+                type="text"
+                default="COM_JOOMLAZEND_VERSION_LATEST"
+                description="COM_JOOMLAZEND_VERSION_LATEST_DESC">
+        
+        </field>
+    
+    </fieldset>
+        
+
+    
+</config>

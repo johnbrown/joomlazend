@@ -12,7 +12,7 @@
  * @link http://joomlazend.rbsolutions.us
  * @version $Id:$
  */
-defined ('_VALID_MOS') or
+defined('_JEXEC') or 
     die('Direct Access to this location is not allowed');
 /**
  * Core_Form_TextEditor
