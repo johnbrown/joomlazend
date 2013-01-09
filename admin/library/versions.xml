@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE update>
+<updates>
+  <versions>
+    <version id="0.0.65a" type="development">
+      <file>/files/com_zend_0.0.65.zip</file>
+      <notes>/p/zfjoomla/downloads/detail?name=com_zend_0.0.65a.zip</notes>
+    </version>
+    <version id="0.0.64a" type="development">
+      <file>/files/com_zend_0.0.64.zip</file>
+      <notes>/p/zfjoomla/downloads/detail?name=com_zend_0.0.64a.zip</notes>
+    </version>
+    <version id="0.0.62a" type="development">
+      <file>/files/com_zend.zip</file>
+      <notes>/p/zfjoomla/downloads/detail?name=com_zend.zip</notes>
+    </version>
+    <version id="0.0.59a" type="development">
+        <file>/files/com_zend_0.0.59a.zip</file>
+        <notes>/p/zfjoomla/downloads/detail?name=com_zend_0.0.59a.zip</notes>
+    </version>
+  </versions>
+</updates>
+ 

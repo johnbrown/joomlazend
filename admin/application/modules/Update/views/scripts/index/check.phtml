@@ -1,0 +1,40 @@
+<?php
+/**
+ * JoomlaZend
+ * Zend Framework for Joomla
+ * Red Black Tree LLC
+ *
+ *
+ * @author rbsolutions (rbsoultions.us@gmail.com)
+ * @copyright (c) 2010 Red Black Tree LLC
+ * @category JoomlZend
+ * @package ComZend
+ * @link http://joomlazend.rbsolutions.us
+ * @version $Id:$
+ */
+?>
+<h2>Check for Updates</h2>
+<?php if(!$this->upgrade) :?>
+   <p> No updates are necessary.</p>
+<?php else: ?>
+    <p>
+        Core updates are available from <?php echo $this->paramArray['version'];?> to <?php echo $this->maxUpdate['id'];?>
+    </p>
+<a href="<?php echo JRoute::_($this->url(array(
+    'module'=>'Update',
+    'controller'=>'index',
+    'action'=>'upgrade',
+),'administrator',false));?>"
+   class="ui-button ui-state-default ui-corner-all">Update</a>
+<?php
+    endif;
+    if (isset($this->form)) {
+        echo $this->form;
+    }
+?>
+<a href="<?php echo JRoute::_($this->url(array(
+    'module'=>'Admin',
+    'controller'=>'config',
+    'action'=>'index',
+),'administrator',true));?>"
+   class="ui-button ui-state-default ui-corner-all">Back</a>

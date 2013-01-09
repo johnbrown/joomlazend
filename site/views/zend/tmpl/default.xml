@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ZEND_VIEW_DEFAULT_DESC">
+        <message>COM_ZEND_VIEW_DEFAULT_DESC</message>
+    </layout>
+    <fields name="request">
+        <fieldset name="request">
+            <field
+                name="zmodule"
+                type="text"
+                label="COM_ZEND_FIELD_MODULE_LABEL"
+                description="COM_ZEND_FIELD_MODULE_DESC"
+                default="Default"
+            />
+            <field
+                name="zcontroller"
+                type="text"
+                label="COM_ZEND_FIELD_CONTROLLER_LABEL"
+                description="COM_ZEND_FIELD_CONTROLLER_DESC"
+                default="index"
+            />
+            <field
+                name="zaction"
+                type="text"
+                label="COM_ZEND_FIELD_ACTION_LABEL"
+                description="COM_ZEND_FIELD_ACTION_DESC"
+                default="index"
+            />
+            <field
+                name="addparams"
+                type="text"
+                label="COM_ZEND_FIELD_LABEL"
+                description="COM_ZEND_FIELD_DESC"
+                default=""
+            />
+        </fieldset>
+    </fields>
+</metadata>

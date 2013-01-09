@@ -1,0 +1,5 @@
+<root>
+    <params>
+        <param type="text" name="version" label="Version:" description="The current installed version of the Zend Framework for Joomla" />
+    </params>
+</root>

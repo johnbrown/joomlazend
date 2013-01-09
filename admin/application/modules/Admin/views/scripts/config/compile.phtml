@@ -1,0 +1,15 @@
+<?php
+defined ('_VALID_MOS') or
+    die('Direct Access to this location is not allowed');
+    if (isset($this->form)) {
+        echo $this->form;
+    }
+    echo $this->results;
+?>
+<p>
+<a href="<?php echo JRoute::_($this->url(array(
+    'controller'=>'config',
+    'action'=>'index',
+),'administrator',false));?>"
+   class="ui-button ui-state-default ui-corner-all">Back</a>
+</p>

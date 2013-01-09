@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+  <name>zend</name>
+  <creationDate>January 09 2013</creationDate>
+  <author>Gnanakeethan Balasubramaniam</author>
+  <authorEmail>gnanakeethan@gmail.com</authorEmail>
+  <authorUrl>http://techdeed.x10.mx</authorUrl>
+  <copyright>2012 All rights reserved.Gnanakeethan</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <version>2013.01.09.12.38</version>
+  <zmjoomlaVersion>2013.01.09.12.38</zmjoomlaVersion>
+  <description>Joomla Zend Component</description>
+  <files folder="site">
+    <filename>zend.php</filename>
+    <filename>config.php</filename>
+    <folder>views</folder>
+  </files>
+  <administration>
+    <menu link="option=com_zend&amp;zmodule=Admin">Zend Module</menu>
+    <files folder="admin">
+      language/en-US/en-US.com_zend.sys.ini
+      
+      <folder>application</folder>
+      <folder>Library</folder>
+      <filename>admin.zend.php</filename>
+      <filename>config.xml</filename>
+      <filename>config.php</filename>
+      <filename>zend.php</filename>
+    </files>
+    <languages folder="administrator">
+            <language tag="en-GB">language/en-GB/en-GB.com_zend.sys.ini</language>            
+    </languages>
+  </administration>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">library/install.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">library/uninstall.sql</file>
+    </sql>
+  </uninstall>
+</extension>

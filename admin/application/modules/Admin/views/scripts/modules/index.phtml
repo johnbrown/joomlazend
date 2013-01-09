@@ -1,0 +1,105 @@
+<?php
+defined ('_VALID_MOS') or
+    die('Direct Access to this location is not allowed');
+if(isset($this->form)) {
+    echo $this->form;
+}?>
+<table class="adminlist" cellspacing="1">
+    <thead>
+        <tr>
+            <th width="5">
+                <?php echo JText::_( $this->translate->_('Num') ); ?>
+            </th>
+            <th width="5%">
+
+            </th>
+            <th width="5%">
+
+            </th>
+            <th width="5%">
+
+            </th>
+            <th class="title">
+                <?php echo JHTML::_('grid.sort',   $this->translate->_('module'), 'c.module', $this->orderDir, $this->order ); ?>
+            </th>
+            <th width="1%" nowrap="nowrap">
+                <?php echo JHTML::_('grid.sort',   $this->translate->_('published'), 'c.state', $this->orderDir, $this->order ); ?>
+            </th>
+            <th width="1%" nowrap="nowrap">
+                <?php echo JHTML::_('grid.sort',   $this->translate->_('enabled'), 'c.state', $this->orderDir, $this->order ); ?>
+            </th>
+            <th width="1%" class="title">
+                <?php echo JHTML::_('grid.sort',   $this->translate->_(id), 'c.id', $this->orderDir, $this->order  ); ?>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php $count = 1;
+        if($this->row!= NULL):
+        foreach($this->row as $row) : ?>
+        <tr class="<?php echo "row".($count%2); ?>">
+            <td>
+                <?php echo $count;?>
+            </td>
+            <td>
+                <a href="<?php echo JRoute::_($this->url(array(
+                    'controller'=>'modules',
+                    'action'=>'uninstall',
+                ),'administrator')."&name=".$row->module);?>" title="Uninstall" class="ui-button ui-state-default ui-corner-all"
+                   style="padding: .4em 1em;"
+                   onclick="return confirm('Are you sure you want to uninstall this module?');">
+                    Uninstall
+                </a>
+            </td>
+            <td>
+                <a href="<?php echo JRoute::_($this->url(array(
+                    'module'=>substr($row->module,1),
+                    'controller'=>'index',
+                    'action'=>'adminindex',
+                ),'administrator'));?>" title="Uninstall" class="ui-button ui-state-default ui-corner-all"
+                   style="padding: .4em 1em;">
+                    Admin
+                </a>
+            </td>
+            <td>
+                <a href="<?php echo JRoute::_($this->url(array(
+                    'module'=>substr($row->module,1),
+                    'controller'=>'index',
+                    'action'=>'index',
+                )));?>" title="Uninstall" class="ui-button ui-state-default ui-corner-all"
+                   style="padding: .4em 1em;"">
+                    View
+                </a>
+            </td>
+            <td>
+                <?php echo $row->module;?>
+            </td>
+            <td align="center">
+                <a href="javascript:void(0);">
+                <img src="templates/<?php echo $this->template;?>/images/admin/<?php
+                    echo $row->published != 0 ? 'tick.png' : 'disabled.png';
+                    ?>" width="16" height="16" border="0"
+                    alt="Publish" /> &nbsp;
+                </a>
+            </td>
+            <td align="center">
+                <a href="javascript:void(0);">
+                <img src="templates/<?php echo $this->template;?>/images/admin/<?php
+                    echo $row->enabled != 0 ? 'tick.png' : 'disabled.png';
+                    ?>" width="16" height="16" border="0"
+                    alt="Enable" /> &nbsp;
+                </a>
+            </td>
+            <td>
+                <?php echo $row->id; ?>
+            </td>
+        </tr>
+        <?php $count++;
+            endforeach;
+        else: ?>
+        <tr>
+            <td colspan ="10"><?php echo $this->translate->_('nomodules');?></td>
+        </tr>
+        <?php endif;?>
+    </tbody>
+</table>
